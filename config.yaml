@@ -1,0 +1,23 @@
+# Training hyperparameters
+
+# Data
+data_path: "/global/homes/d/djc43/m3958/data/3D_hit.npy"
+time_step: 0.25
+batch_time: 3
+train_size: 320  # number of time samples for training; rest used for test
+
+# Optimization
+batch_size: 8
+learning_rate: 1.0e-4
+epochs: 200
+lr_decay: 0.5
+
+# Model / run
+device: "cuda"  # use "cpu" if no CUDA available
+net_name: "3D_HIT_Unet_128_spec"
+chkpts_path_outputs: "model_chkpts/"
+
+# Model architecture
+n_channels: 3
+latent_dim: 48
+num_convs: 7
